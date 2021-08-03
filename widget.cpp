@@ -14,6 +14,7 @@ Widget::Widget(QWidget *parent)
     this->setMinimumSize(45,45);                        //设置最小尺寸
     this->setStyleSheet("background:#a9d3ff");
     setLayout(ui->verticalLayout);
+    ui->titleBar->setNoVisBack();
     loadStyleSheet(tr("main"));
 }
 

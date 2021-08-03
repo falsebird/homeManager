@@ -14,7 +14,8 @@ class Titlebar : public QWidget
 public:
     explicit Titlebar(QWidget *parent = nullptr);
     ~Titlebar();
-
+public slots:
+    void setNoVisBack();
 private:
     Ui::Titlebar *ui;
     bool _ispressed;

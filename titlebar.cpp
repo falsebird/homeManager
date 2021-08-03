@@ -9,13 +9,20 @@ Titlebar::Titlebar(QWidget *parent) :
     ui->setupUi(this);
     this->setFixedHeight(40);
     connect(ui->clostBtn, SIGNAL(clicked(bool)), qApp, SLOT(quit()));
-   // ui->winTitle->setStyleSheet(QString::fromUtf8("font: 20pt \"Arial\";color : #00ffff;"));
-//     ui->winTitle->setStyleSheet(QString::fromUtf8("color : #00ffff;"));
+ // ui->winTitle->setStyleSheet(QString::fromUtf8("font: 20pt \"Arial\";color : #00ffff;"));
+//  ui->winTitle->setStyleSheet(QString::fromUtf8("color : #00ffff;"));
+
 }
 
 Titlebar::~Titlebar()
 {
     delete ui;
+}
+
+void Titlebar::setNoVisBack()
+{
+    ui->backBtn->setVisible(false);
+    ui->leftSpacer->changeSize(0,0);
 }
 
 void Titlebar::mousePressEvent(QMouseEvent *event)
