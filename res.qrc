@@ -3,5 +3,40 @@
         <file>res/main.qss</file>
         <file>res/imgs/close-hover.png</file>
         <file>res/imgs/close-normal.png</file>
+        <file>res/imgs/airCondi_cold.png</file>
+        <file>res/imgs/airCondi_off.png</file>
+        <file>res/imgs/airCondi_warm.png</file>
+        <file>res/imgs/backoff_acti.png</file>
+        <file>res/imgs/backoff_noAct.png</file>
+        <file>res/imgs/bedLight_off.png</file>
+        <file>res/imgs/bedLight_on.png</file>
+        <file>res/imgs/btn_Acti.png</file>
+        <file>res/imgs/btn_noAct.png</file>
+        <file>res/imgs/close_acti.png</file>
+        <file>res/imgs/close_noAct.png</file>
+        <file>res/imgs/down_row.png</file>
+        <file>res/imgs/downarrow_acti.png</file>
+        <file>res/imgs/downarrow_noAct.png</file>
+        <file>res/imgs/fez.png</file>
+        <file>res/imgs/light_off.png</file>
+        <file>res/imgs/light_on.png</file>
+        <file>res/imgs/next_acti.png</file>
+        <file>res/imgs/next_noAct.png</file>
+        <file>res/imgs/normalqualityitem.png</file>
+        <file>res/imgs/nowatermarkitem.png</file>
+        <file>res/imgs/play_acti.png</file>
+        <file>res/imgs/play_noAct.png</file>
+        <file>res/imgs/pre_acti.png</file>
+        <file>res/imgs/pre_noAct.png</file>
+        <file>res/imgs/pulse_acti.png</file>
+        <file>res/imgs/pulse_noAct.png</file>
+        <file>res/imgs/sound_off.png</file>
+        <file>res/imgs/sound_on.png</file>
+        <file>res/imgs/stop_acti.png</file>
+        <file>res/imgs/stop_noAct.png</file>
+        <file>res/imgs/switch_acti.png</file>
+        <file>res/imgs/switch_noAct.png</file>
+        <file>res/imgs/uparrow_acti.png</file>
+        <file>res/imgs/uparrow_noAct.png</file>
     </qresource>
 </RCC>

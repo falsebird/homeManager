@@ -17,6 +17,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     devicecontrolpanle.cpp \
+    deviceswitch.cpp \
     logincontrolor.cpp \
     logindialog.cpp \
     main.cpp \
@@ -27,6 +28,7 @@ SOURCES += \
 
 HEADERS += \
     devicecontrolpanle.h \
+    deviceswitch.h \
     logincontrolor.h \
     logindialog.h \
     musicplayerpanel.h \
@@ -36,6 +38,7 @@ HEADERS += \
 
 FORMS += \
     devicecontrolpanle.ui \
+    deviceswitch.ui \
     logindialog.ui \
     musicplayerpanel.ui \
     titlebar.ui \
