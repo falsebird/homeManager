@@ -1,0 +1,130 @@
+
+
+QWidget{
+background-color:transparent;
+}
+
+
+QDialog{
+    background-color: gainsboro;
+    background-image: url(:/res/imgs/background.png);
+    background-position: top right;
+    background-repeat: no-repeat
+}
+
+QPushButton#clostBtn
+{
+   border-image:url(:/res/imgs/close-normal.png);
+   border-width:0px 0px 0px 0px;
+   background-repeat:none;
+   background-origin: content;
+}
+
+QPushButton#clostBtn:hover
+{
+  border-image:url(:/res/imgs/close-hover.png);
+}
+
+
+QPushButton#oneBtn
+{
+    background-image: url(:/res/imgs/normalqualityitem.png);
+    border-width:0px 0px 0px 0px;
+    background-repeat:none;
+    background-origin: content;
+    text-align:bottom;
+    font: 14pt "黑体";
+    padding-bottom: 9px;
+    color:gray;
+
+}
+QPushButton#oneBtn:hover
+{
+    border-image: url(:/res/imgs/watermarkitemhover.png);
+    border-width:0px 0px 0px 0px;
+    background-repeat:none;
+    background-origin: content;
+}
+QPushButton#oneBtn:focus
+{
+     border-image: url(:/res/imgs/watermarkitemclick.png);
+    border-width:0px 0px 0px 0px;
+    background-repeat:none;
+    background-origin: content;
+}
+QPushButton#splitBtn
+{
+    background-image: url(:/res/imgs/nowatermarkitem.png);
+    border-width:0px 0px 0px 0px;
+    background-repeat:none;
+    background-origin: content;
+    text-align:bottom;
+    font: 14pt "黑体";
+    padding-bottom: 9px;
+    color:gray;
+}
+QPushButton#splitBtn:hover
+{
+    border-image: url(:/res/imgs/watermarkitemhover.png);
+    border-width:0px 0px 0px 0px;
+    background-repeat:none;
+    background-origin: content;
+}
+QPushButton#splitBtn:focus
+{
+     border-image: url(:/res/imgs/watermarkitemclick.png);
+    border-width:0px 0px 0px 0px;
+    background-repeat:none;
+    background-origin: content;
+}
+
+
+
+QLabel
+{
+    font: 14pt "黑体";
+
+}
+QComboBox
+{
+font: 12pt "黑体" ;
+background-color:rgb(250,250,250);
+border :  1px  solid  gray ;
+border-radius:  3px ;
+
+}
+QComboBox::drop-down {
+     subcontrol-origin: padding;
+     subcontrol- position :  top  right ;
+     width :  20px ;
+
+     border-left-width :  1px ;
+     border-left-color : darkgray;
+     border-left-style :  solid ;  /* just a single line */
+     border-top-right-radius:  3px ;  /* same radius as the QComboBox */
+     border-bottom-right-radius:  3px ;
+}
+QComboBox::down-arrow {
+    image:url(:/res/imgs/down_row.png);
+}
+
+QLineEdit
+{
+font: 12pt "黑体";
+border :  1px  solid  gray ;
+border-radius:  3px
+}
+
+QPushButton#saveBtn
+{
+    background-color:rgb(0, 230, 230);
+    border-radius: 10px;
+    font: 12pt "黑体";
+    color:rgb(255,255,255);
+}
+QLabel#winTitle
+{
+    font: 20pt "黑体";
+    color :rgb(0, 230, 230);
+}
+

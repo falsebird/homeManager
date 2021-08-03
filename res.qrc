@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/main.qss</file>
+        <file>res/imgs/close-hover.png</file>
+        <file>res/imgs/close-normal.png</file>
+    </qresource>
+</RCC>
