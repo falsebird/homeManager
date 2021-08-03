@@ -15,8 +15,13 @@ public:
     explicit MusicPlayerPanel(QWidget *parent = nullptr);
     ~MusicPlayerPanel();
 
+signals:
+    void backOff();
 private:
     Ui::MusicPlayerPanel *ui;
+
+public slots:
+    void backOffClicked();
 };
 
 #endif // MUSICPLAYERPANEL_H

@@ -27,6 +27,7 @@ private:
     int airCondiFlag = 0;//0 shutdown 1 cold 2 warm
 public slots:
 
+
 };
 
 #endif // DEVICECONTROLPANLE_H

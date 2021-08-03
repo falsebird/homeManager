@@ -34,6 +34,7 @@ void Widget::loadStyleSheet(const QString& sheetName)
 void Widget::setMusicPanle()
 {
     musicPlayerPanel = new MusicPlayerPanel(this);
+    connect(musicPlayerPanel,&MusicPlayerPanel::backOff,this,&Widget::secondPageBackOff);
 
 }
 

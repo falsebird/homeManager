@@ -34,5 +34,7 @@ private slots:
     void userLoginSuccess(const QString& username);
     void secondPageBackOff();
     void on_weatherRequest_Btn_clicked();
+    void on_music_Btn_clicked();
+    void on_control_Btn_clicked();
 };
 #endif // WIDGET_H

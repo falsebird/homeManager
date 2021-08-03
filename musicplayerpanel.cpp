@@ -12,3 +12,9 @@ MusicPlayerPanel::~MusicPlayerPanel()
 {
     delete ui;
 }
+
+void MusicPlayerPanel::backOffClicked()
+{
+    hide();
+    emit backOff();
+}
