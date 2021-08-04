@@ -25,7 +25,9 @@ private:
 
 public slots:
     void backOffClicked();
+    void itemDoubleClicked(const QModelIndex& index);
 
+private slots:
 
 };
 

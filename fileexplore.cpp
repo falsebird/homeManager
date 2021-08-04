@@ -4,17 +4,21 @@
 FileExplore::FileExplore(QObject *parent) : QThread(parent)
 {
     m_filters.append("*.mp3");
+    m_paths.append("../song");
+    _fileList = new QFileInfoList;
 }
 
 FileExplore::~FileExplore()
 {
     delete _fileList;
+
 }
 
 void FileExplore::run()
 {
     GetFileList(m_paths);
     emit getFileListDone(_fileList);
+    qDebug()<<"get flie list"<<endl;
 }
 
 void FileExplore::GetFileList(const QString &path, QFileInfoList *fileList)
@@ -46,11 +50,12 @@ void FileExplore::GetFileList(const QList<QString> paths)
     //GetFileList(_path,_fileList);
     int fileNum =  _fileList->size();
     qDebug()<<fileNum;
-//    for(int i = 0 ; i < fileNum ; i++){
-//       qDebug()<< _fileList->at(i).absoluteFilePath();
-//       qDebug()<<i<<endl;
+    for(int i = 0 ; i < fileNum ; i++){
+       qDebug()<< _fileList->at(i).absoluteFilePath();
+       qDebug()<<i<<endl;
+       qDebug()<<_fileList->at(i).fileName()<<endl;
 //       m_fileList->append(myFileInfo(_fileList->at(i)));
-//    }
+    }
 //    emit getFileListDone(_fileList);
     /*m_fileSet = m_fileList->toSet();
     assert(m_fileSet.size()==m_fileList->size());*///两者的长度应该是相等的

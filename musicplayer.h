@@ -33,6 +33,8 @@ private:
     int m_current_paly_row;
     QMediaPlayer *m_music_player;
     int m_current_volum;
+    bool m_play_flag;
+    int play_state;
 };
 
 #endif // MUSICPLAYER_H

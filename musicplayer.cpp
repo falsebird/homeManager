@@ -5,6 +5,7 @@ musicPlayer::musicPlayer(QObject *parent) : QAbstractListModel(parent)
     m_current_paly_row = 0;
     m_current_volum = 20;
     m_music_player = new QMediaPlayer(this);
+    m_play_flag = false;
 }
 
 musicPlayer::~musicPlayer()
@@ -60,7 +61,8 @@ void musicPlayer::playMusic(int row)
             m_music_player->setVolume(40); // 0~100
             m_music_player->play();
         }
-
+        m_play_flag = true;
+        qDebug()<<" puse music"<<endl;
     }
 
 }
@@ -75,6 +77,7 @@ void musicPlayer::nextMusic()
 
 void musicPlayer::preMusic()
 {
+    qDebug()<<" preMusic"<<endl;
     if(m_current_paly_row ==0){
         playMusic(_fileList->size()-1);
     }else{
@@ -84,12 +87,20 @@ void musicPlayer::preMusic()
 
 void musicPlayer::_playMusic()
 {
-    playMusic(m_current_volum);
+    qDebug()<<" _playMusic"<<endl;
+    if(m_play_flag){
+        _puseMusic();
+    }else{
+        playMusic(m_current_volum);
+    }
+
 }
 
 void musicPlayer::_puseMusic()
 {
+    qDebug()<<" puse music"<<endl;
     m_music_player->pause();
+    m_play_flag = false;
 }
 
 void musicPlayer::volumUp()
