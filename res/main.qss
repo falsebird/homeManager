@@ -28,40 +28,145 @@ QPushButton#backBtn:hover
 }
 
 QPushButton#lightSwitchBtn{
-    border-image:url(:/res/imgs/backoff_noAct.png);
+    border-image:url(:/res/imgs/switch_noAct.png);
     background-position: top right;
     background-repeat: no-repeat;
 }
 QPushButton#lightSwitchBtn:default{
-    border-image:url(:/res/imgs/backoff_acti.png);
+    border-image:url(:/res/imgs/switch_acti.png);
 
 }
 QPushButton#bedLigSwitchBtn{
-    border-image:url(:/res/imgs/backoff_noAct.png);
+    border-image:url(:/res/imgs/switch_noAct.png);
     background-position: top right;
     background-repeat: no-repeat;
 }
 QPushButton#bedLigSwitchBtn:default{
-    border-image:url(:/res/imgs/backoff_acti.png);
+    border-image:url(:/res/imgs/switch_acti.png);
 
 }
 QPushButton#soundSwitchBtn{
-    border-image:url(:/res/imgs/backoff_noAct.png);
+    border-image:url(:/res/imgs/switch_noAct.png);
     background-position: top right;
     background-repeat: no-repeat;
 }
 QPushButton#soundSwitchBtn:default{
-    border-image:url(:/res/imgs/backoff_acti.png);
+    border-image:url(:/res/imgs/switch_acti.png);
 
 }
 QPushButton#airCondiSwitchBtn{
-    border-image:url(:/res/imgs/backoff_noAct.png);
+    border-image:url(:/res/imgs/switch_noAct.png);
     background-position: top right;
     background-repeat: no-repeat;
 }
 QPushButton#airCondiSwitchBtn:default{
-    border-image:url(:/res/imgs/backoff_acti.png);
+    border-image:url(:/res/imgs/switch_acti.png);
 
+}
+
+
+QPushButton#lightStateBtn:default{
+    border-image:url(:/res/imgs/light_on.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+QPushButton#lightStateBtn{
+    border-image:url(:/res/imgs/light_off.png);
+
+}
+QPushButton#bedLigStateBtn:default{
+    border-image:url(:/res/imgs/bedLight_on.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+QPushButton#bedLigStateBtn{
+    border-image:url(:/res/imgs/bedLight_off.png);
+
+}
+QPushButton#soundStateBtn:default{
+    border-image:url(:/res/imgs/sound_on.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+QPushButton#soundStateBtn{
+    border-image:url(:/res/imgs/sound_off.png);
+
+}
+QPushButton#airCondiStateBtn:default{
+    border-image:url(:/res/imgs/airCondi_cold.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+QPushButton#airCondiStateBtn{
+    border-image:url(:/res/imgs/airCondi_off.png);
+
+}
+QPushButton#tempUpBtn:open{
+    border-image:url(:/res/imgs/uparrow_acti.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+QPushButton#tempUpBtn{
+    border-image:url(:/res/imgs/uparrow_noAct.png);
+
+}
+QPushButton#tempDownBtn:open{
+    border-image:url(:/res/imgs/downarrow_acti.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+QPushButton#tempDownBtn{
+    border-image:url(:/res/imgs/downarrow_noAct.png);
+
+}
+QPushButton#clearOutInfoBtn{
+    border-image:url(:/res/imgs/btn_noAct.png);
+
+    color:#FFFFFF;
+}
+QPushButton#clearOutInfoBtn:open{
+    border-image:url(:/res/imgs/btn_Acti.png);
+    color:#212121;
+}
+
+QPushButton#logInBtn{
+    border-image:url(:/res/imgs/btn_noAct.png);
+    color:#FFFFFF;
+}
+QPushButton#logInBtn:open{
+    border-image:url(:/res/imgs/btn_Acti.png);
+    color:#212121;
+}
+
+QPushButton#playSonn_Btn{
+    border-image:url(:/res/imgs/play_noAct.png);
+}
+QPushButton#playSonn_Btn:default{
+    border-image:url(:/res/imgs/play_acti.png);
+}
+QPushButton#nextSong_Btn{
+border-image:url(:/res/imgs/next_noAct.png);
+}
+QPushButton#nextSong_Btn:open{
+border-image:url(:/res/imgs/next_acti.png);
+}
+QPushButton#preSong_Btn{
+border-image:url(:/res/imgs/pre_noAct.png);
+}
+QPushButton#preSong_Btn:open{
+border-image:url(:/res/imgs/pre_acti.png);
+}
+QPushButton#volumDown_Btn{
+border-image:url(:/res/imgs/downarrow_noAct.png);
+}
+QPushButton#volumDown_Btn:open{
+border-image:url(:/res/imgs/downarrow_acti.png);
+}
+QPushButton#volumUp_Btn{
+border-image:url(:/res/imgs/uparrow_noAct.png);
+}
+QPushButton#volumUp_Btn:open{
+border-image:url(:/res/imgs/uparrow_acti.png);
 }
 
 QLabel
@@ -82,15 +187,6 @@ QLineEdit{
     border-radius:  3px
 }
 
-QPushButton#logInBtn
-{
-    background-color: gainsboro;
-    background-image: url(:/res/imgs/btn_noAct.png);
-    background-position: top right;
-    background-repeat: no-repeat;
-}
-QPushButton#logInBtn:hover{
-    border-image:url(:/res/imgs/btn_acti.png);
-}
+
 
 
