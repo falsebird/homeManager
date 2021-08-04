@@ -8,9 +8,9 @@ Widget::Widget(QWidget *parent)
     ui->setupUi(this);
     setLoginDialog();
     setMainWindos();
-    setMusicPanle();
-    setWeatherPanle();
-    setDeviceContPanle();
+//    setMusicPanle();
+//    setWeatherPanle();
+//    setDeviceContPanle();
 
 }
 
@@ -87,23 +87,27 @@ void Widget::secondPageBackOff()
 void Widget::on_weatherRequest_Btn_clicked()
 {
 //    this->close();
-    this->hide();
+    setWeatherPanle();
+//    this->hide();
     weatherPanle->show();
-    //this->hide();
+    this->hide();
 }
 
 void Widget::on_music_Btn_clicked()
 {
 //    this->close();
-    this->hide();
-    musicPlayerPanel->show();
+    setMusicPanle();
 //    this->hide();
+    musicPlayerPanel->show();
+    this->hide();
 }
 
 void Widget::on_control_Btn_clicked()
 {
 //    this->close();
-    this->hide();
+    setDeviceContPanle();
+
     deviceContPanle->show();
+    this->hide();
 //    this->hide();
 }
