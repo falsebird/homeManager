@@ -41,7 +41,6 @@ void MusicPlayerPanel::backOffClicked()
 
 void MusicPlayerPanel::itemDoubleClicked(const QModelIndex &index)
 {
-    QModelIndex _index = ui->musicListView->currentIndex();
     m_music_palyer->playMusic(index.row());
 }
 

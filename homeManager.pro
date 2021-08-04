@@ -24,7 +24,9 @@ SOURCES += \
     main.cpp \
     musicplayer.cpp \
     musicplayerpanel.cpp \
+    mynetwork.cpp \
     titlebar.cpp \
+    weatherinfo.cpp \
     weatherpanle.cpp \
     widget.cpp
 
@@ -36,7 +38,9 @@ HEADERS += \
     logindialog.h \
     musicplayer.h \
     musicplayerpanel.h \
+    mynetwork.h \
     titlebar.h \
+    weatherinfo.h \
     weatherpanle.h \
     widget.h
 

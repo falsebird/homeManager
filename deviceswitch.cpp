@@ -10,7 +10,7 @@ DeviceSwitch::DeviceSwitch(QWidget *parent) :
     curretnVolum = 0;
     connect(ui->deviceSwitchBtn,&QPushButton::clicked,this,&DeviceSwitch::deviceSwitch);
     connect(ui->vloumSlider,&QSlider::valueChanged,this,&DeviceSwitch::setVoulum);
-    setFixedSize(100,100);
+//    setFixedSize(200,100);
 }
 
 DeviceSwitch::~DeviceSwitch()
