@@ -6,10 +6,11 @@ DeviceControlPanle::DeviceControlPanle(QWidget *parent) :
     ui(new Ui::DeviceControlPanle)
 {
     ui->setupUi(this);
-//    ui->widget->setTitle(tr("Device Control"));
-//    ui->widget->setNoClose();
-//    connect(ui->widget,&Titlebar::backoffClicked,this,&DeviceControlPanle::backoffClicked);
-//    setLayout(ui->outSideVerticalLayout);
+    ui->titlebar->setTitle(tr("Device Control"));
+    ui->titlebar->setNoClose();
+    connect(ui->titlebar,&Titlebar::backoffClicked,this,&DeviceControlPanle::backoffClicked);
+    setLayout(ui->mainVerLay);
+    ui->airCondiSwitch->setLayout(ui->airHorLay);
 }
 
 DeviceControlPanle::~DeviceControlPanle()
