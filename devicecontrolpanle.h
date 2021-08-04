@@ -25,7 +25,10 @@ private:
     int m_lightVoulum = 0;
     int m_airCondiTempre = 26;
     int m_airCondiFlag = 0;//0 shutdown 1 cold 2 warm
+signals:
+    void backOff();
 public slots:
+
     void backoffClicked();
     void lightSliderChange(int v);
     void bedLightSliderChange(int v);

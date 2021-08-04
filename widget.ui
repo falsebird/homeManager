@@ -36,7 +36,7 @@
      <number>10</number>
     </property>
     <item>
-     <widget class="Titlebar" name="titleBar" native="true"/>
+     <widget class="Titlebar" name="titlebar" native="true"/>
     </item>
     <item>
      <spacer name="verticalSpacer">
@@ -83,7 +83,7 @@
   <customwidget>
    <class>Titlebar</class>
    <extends>QWidget</extends>
-   <header>titlebar.h</header>
+   <header location="global">titlebar.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

@@ -6,9 +6,9 @@ MusicPlayerPanel::MusicPlayerPanel(QWidget *parent) :
     ui(new Ui::MusicPlayerPanel)
 {
     ui->setupUi(this);
-    connect(ui->widget,&Titlebar::backoffClicked,this,&MusicPlayerPanel::backOffClicked);
-    ui->widget->setTitle(tr("music player"));
-    ui->widget->setNoClose();
+    connect(ui->titlebar,&Titlebar::backoffClicked,this,&MusicPlayerPanel::backOffClicked);
+    ui->titlebar->setTitle(tr("音乐播放器"));
+    ui->titlebar->setNoClose();
     this->setLayout(ui->verticalLayout_3);
 //获取歌曲列表
     m_fileThread = new FileExplore(this);

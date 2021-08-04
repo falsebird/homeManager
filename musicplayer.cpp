@@ -40,6 +40,11 @@ int musicPlayer::columnCount(const QModelIndex &parent) const
     return 1;
 }
 
+QHash<int, QByteArray> musicPlayer::roleNames() const
+{
+
+}
+
 void musicPlayer::getFileInfoList(QFileInfoList * fileList)
 {
     emit beginResetModel();

@@ -7,7 +7,7 @@ DeviceControlPanle::DeviceControlPanle(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    ui->titlebar->setTitle(tr("Device Control"));
+    ui->titlebar->setTitle(tr("设备控制"));
     ui->titlebar->setNoClose();
     connect(ui->titlebar,&Titlebar::backoffClicked,this,&DeviceControlPanle::backoffClicked);
 
@@ -53,7 +53,8 @@ DeviceControlPanle::~DeviceControlPanle()
 
 void DeviceControlPanle::backoffClicked()
 {
-    hide();
+    this->hide();
+    emit backOff();
 }
 
 void DeviceControlPanle::lightSliderChange(int v)

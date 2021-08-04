@@ -20,7 +20,8 @@ private:
     Ui::WeatherPanle *ui;
     MyNetwork* net;
     WeatherInfo* m_currentWeatherInfo;
-
+signals:
+    void backOff();
 public slots:
     void backoffClicked();
     void search();

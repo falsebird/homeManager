@@ -30,14 +30,14 @@
      <number>22</number>
     </property>
     <item>
-     <widget class="Titlebar" name="widget" native="true"/>
+     <widget class="Titlebar" name="titlebar" native="true"/>
     </item>
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QLabel" name="weatherLabel">
         <property name="text">
-         <string>TextLabel</string>
+         <string>城   市：</string>
         </property>
        </widget>
       </item>
@@ -46,8 +46,23 @@
       </item>
       <item>
        <widget class="QPushButton" name="requestBtn">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>70</width>
+          <height>40</height>
+         </size>
+        </property>
         <property name="text">
-         <string>PushButton</string>
+         <string>查询</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
         </property>
        </widget>
       </item>

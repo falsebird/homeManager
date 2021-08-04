@@ -35,19 +35,21 @@ void Widget::setMusicPanle()
 {
     musicPlayerPanel = new MusicPlayerPanel(this);
     connect(musicPlayerPanel,&MusicPlayerPanel::backOff,this,&Widget::secondPageBackOff);
-    musicPlayerPanel->hide();
+//    musicPlayerPanel->hide();
 }
 
 void Widget::setDeviceContPanle()
 {
     deviceContPanle = new  DeviceControlPanle(this);
-    deviceContPanle->hide();
+    connect(deviceContPanle,&DeviceControlPanle::backOff,this,&Widget::secondPageBackOff);
+//    deviceContPanle->hide();
 }
 
 void Widget::setWeatherPanle()
 {
     weatherPanle = new WeatherPanle(this);
-    weatherPanle->hide();
+    connect(weatherPanle,&WeatherPanle::backOff,this,&Widget::secondPageBackOff);
+//    weatherPanle->hide();
 }
 
 void Widget::setMainWindos()
@@ -57,11 +59,11 @@ void Widget::setMainWindos()
     connect(loginDialog,&LoginDialog::userlogInsuccess,this,&Widget::userLoginSuccess);
     this->setWindowFlags(Qt::FramelessWindowHint);      //设置为无边框窗口
     this->setMinimumSize(45,45);                        //设置最小尺寸
-    this->setStyleSheet("background:#a9d3ff");
+
     setLayout(ui->verticalLayout);
-    ui->titleBar->setNoVisBack();
+    ui->titlebar->setNoVisBack();
     loadStyleSheet(tr("main"));
-    ui->titleBar->setTitle(tr("home manager"));
+    ui->titlebar->setTitle(tr("智能家居"));
 }
 
 void Widget::setLoginDialog()
@@ -85,6 +87,7 @@ void Widget::secondPageBackOff()
 void Widget::on_weatherRequest_Btn_clicked()
 {
 //    this->close();
+    this->hide();
     weatherPanle->show();
     //this->hide();
 }
@@ -92,6 +95,7 @@ void Widget::on_weatherRequest_Btn_clicked()
 void Widget::on_music_Btn_clicked()
 {
 //    this->close();
+    this->hide();
     musicPlayerPanel->show();
 //    this->hide();
 }
@@ -99,6 +103,7 @@ void Widget::on_music_Btn_clicked()
 void Widget::on_control_Btn_clicked()
 {
 //    this->close();
+    this->hide();
     deviceContPanle->show();
 //    this->hide();
 }

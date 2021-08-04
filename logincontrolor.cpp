@@ -11,18 +11,18 @@ pthread_mutex_t LoginControlor::lock= PTHREAD_MUTEX_INITIALIZER;
 LoginControlor *LoginControlor::getInstance()
 {
 
-    if(loginControlor==NULL){
+    if(LoginControlor::loginControlor==NULL){
 
         pthread_mutex_lock(&lock);
 
-        if(loginControlor == NULL){
-           loginControlor = new LoginControlor;
+        if(LoginControlor::loginControlor == NULL){
+           LoginControlor::loginControlor = new LoginControlor;
         }
 
         pthread_mutex_unlock(&lock);
     }
 
-    return loginControlor;
+    return LoginControlor::loginControlor;
 }
 
 
@@ -33,9 +33,9 @@ LoginControlor::DeleteSpace::DeleteSpace() {;}  //初始化构造函数为空
 
 LoginControlor::DeleteSpace::~DeleteSpace() {
     qDebug() << "~DeleteSpace()" << endl;
-    if(loginControlor != NULL)
+    if(LoginControlor::loginControlor != NULL)
         qDebug() << "~DeleteSpace()" << endl;
-        delete loginControlor;
+        delete LoginControlor::loginControlor;
 }
 
 

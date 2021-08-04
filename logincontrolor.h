@@ -11,6 +11,7 @@ class LoginControlor : public QObject//使用单例模式，因为登录控制�
 public:
 
     static LoginControlor* getInstance();
+    ~LoginControlor(){;}
 
 signals:
     void logInScuess(const QString& username);
