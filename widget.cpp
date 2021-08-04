@@ -35,17 +35,19 @@ void Widget::setMusicPanle()
 {
     musicPlayerPanel = new MusicPlayerPanel(this);
     connect(musicPlayerPanel,&MusicPlayerPanel::backOff,this,&Widget::secondPageBackOff);
-
+    musicPlayerPanel->hide();
 }
 
 void Widget::setDeviceContPanle()
 {
     deviceContPanle = new  DeviceControlPanle(this);
+    deviceContPanle->hide();
 }
 
 void Widget::setWeatherPanle()
 {
     weatherPanle = new WeatherPanle(this);
+    weatherPanle->hide();
 }
 
 void Widget::setMainWindos()
@@ -58,7 +60,8 @@ void Widget::setMainWindos()
     this->setStyleSheet("background:#a9d3ff");
     setLayout(ui->verticalLayout);
     ui->titleBar->setNoVisBack();
-    //loadStyleSheet(tr("main"));
+    loadStyleSheet(tr("main"));
+    ui->titleBar->setTitle(tr("home manager"));
 }
 
 void Widget::setLoginDialog()
@@ -81,18 +84,21 @@ void Widget::secondPageBackOff()
 
 void Widget::on_weatherRequest_Btn_clicked()
 {
+//    this->close();
     weatherPanle->show();
-    this->hide();
+    //this->hide();
 }
 
 void Widget::on_music_Btn_clicked()
 {
+//    this->close();
     musicPlayerPanel->show();
-    this->hide();
+//    this->hide();
 }
 
 void Widget::on_control_Btn_clicked()
 {
+//    this->close();
     deviceContPanle->show();
-    this->hide();
+//    this->hide();
 }

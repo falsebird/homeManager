@@ -26,7 +26,7 @@ private:
     int airCondiTempre = 26;
     int airCondiFlag = 0;//0 shutdown 1 cold 2 warm
 public slots:
-
+    void backoffClicked();
 
 };
 

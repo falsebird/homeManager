@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui multimedia
 QT += sql
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -18,9 +18,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     devicecontrolpanle.cpp \
     deviceswitch.cpp \
+    fileexplore.cpp \
     logincontrolor.cpp \
     logindialog.cpp \
     main.cpp \
+    musicplayer.cpp \
     musicplayerpanel.cpp \
     titlebar.cpp \
     weatherpanle.cpp \
@@ -29,8 +31,10 @@ SOURCES += \
 HEADERS += \
     devicecontrolpanle.h \
     deviceswitch.h \
+    fileexplore.h \
     logincontrolor.h \
     logindialog.h \
+    musicplayer.h \
     musicplayerpanel.h \
     titlebar.h \
     weatherpanle.h \

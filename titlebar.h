@@ -14,8 +14,13 @@ class Titlebar : public QWidget
 public:
     explicit Titlebar(QWidget *parent = nullptr);
     ~Titlebar();
+
+signals:
+    void backoffClicked();
 public slots:
     void setNoVisBack();
+    void setNoClose();
+    void setTitle(const QString& title);
 private:
     Ui::Titlebar *ui;
     bool _ispressed;
@@ -24,6 +29,8 @@ protected:
     void mousePressEvent(QMouseEvent* event) override;
     void mouseMoveEvent(QMouseEvent *event) override;
     void mouseReleaseEvent(QMouseEvent *event) override;
+private slots:
+    void on_backBtn_clicked();
 };
 
 #endif // TITLEBAR_H

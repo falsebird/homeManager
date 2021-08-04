@@ -34,6 +34,7 @@ LoginControlor::DeleteSpace::DeleteSpace() {;}  //初始化构造函数为空
 LoginControlor::DeleteSpace::~DeleteSpace() {
     qDebug() << "~DeleteSpace()" << endl;
     if(loginControlor != NULL)
+        qDebug() << "~DeleteSpace()" << endl;
         delete loginControlor;
 }
 

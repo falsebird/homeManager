@@ -17,6 +17,11 @@ public:
 
 private:
     Ui::WeatherPanle *ui;
+
+public slots:
+    void backoffClicked();
+private slots:
+//    void on_pushButton_clicked();
 };
 
 #endif // WEATHERPANLE_H

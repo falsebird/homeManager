@@ -23,6 +23,9 @@
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_3">
+    <property name="topMargin">
+     <number>20</number>
+    </property>
     <item>
      <widget class="Titlebar" name="widget" native="true"/>
     </item>
@@ -58,7 +61,7 @@
          <number>10</number>
         </property>
         <item>
-         <widget class="QListView" name="listView"/>
+         <widget class="QListView" name="musicListView"/>
         </item>
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout">
@@ -129,6 +132,13 @@
          </widget>
         </item>
         <item>
+         <widget class="QPushButton" name="pushButton">
+          <property name="text">
+           <string>PushButton</string>
+          </property>
+         </widget>
+        </item>
+        <item>
          <spacer name="verticalSpacer">
           <property name="orientation">
            <enum>Qt::Vertical</enum>
@@ -165,7 +175,7 @@
   <customwidget>
    <class>Titlebar</class>
    <extends>QWidget</extends>
-   <header location="global">titlebar.h</header>
+   <header>titlebar.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

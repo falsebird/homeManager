@@ -25,6 +25,16 @@ void Titlebar::setNoVisBack()
     ui->leftSpacer->changeSize(0,0);
 }
 
+void Titlebar::setNoClose()
+{
+    ui->clostBtn->setVisible(false);
+}
+
+void Titlebar::setTitle(const QString &title)
+{
+    ui->winTitle->setText(title);
+}
+
 void Titlebar::mousePressEvent(QMouseEvent *event)
 {
     _ispressed=true;
@@ -56,3 +66,8 @@ void Titlebar::mouseReleaseEvent(QMouseEvent *event)
 }
 
 
+
+void Titlebar::on_backBtn_clicked()
+{
+    emit backoffClicked();
+}
