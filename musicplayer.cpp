@@ -51,16 +51,12 @@ void musicPlayer::playMusic(int row)
 {
 
     if(row >=0&&row<_fileList->size()){
-        if(m_current_paly_row ==row){
-            m_music_player->play();
-        }else{
-            m_current_paly_row = row;
-            QString music_path = _fileList->at(row).absoluteFilePath();
-            m_music_player->setMedia(QUrl::fromLocalFile(music_path));
-            //3.设置音量
-            m_music_player->setVolume(40); // 0~100
-            m_music_player->play();
-        }
+        m_current_paly_row = row;
+        QString music_path = _fileList->at(row).absoluteFilePath();
+        m_music_player->setMedia(QUrl::fromLocalFile(music_path));
+        //3.设置音量
+        m_music_player->setVolume(40); // 0~100
+        m_music_player->play();
         m_play_flag = true;
         qDebug()<<" puse music"<<endl;
     }
@@ -91,7 +87,7 @@ void musicPlayer::_playMusic()
     if(m_play_flag){
         _puseMusic();
     }else{
-        playMusic(m_current_volum);
+        playMusic(m_current_paly_row);
     }
 
 }
