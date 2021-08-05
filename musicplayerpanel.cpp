@@ -11,12 +11,11 @@ MusicPlayerPanel::MusicPlayerPanel(QWidget *parent) :
     ui->titlebar->setNoClose();
     this->setLayout(ui->verticalLayout_3);
 //获取歌曲列表
-    m_fileThread = new FileExplore(this);
     m_music_palyer = new musicPlayer(this);
+    m_fileThread = new FileExplore(this);
+
     connect(m_fileThread,&FileExplore::getFileListDone,m_music_palyer,&musicPlayer::getFileInfoList);
-    m_fileThread->run();
-    //ui->musicListView
-    ui->musicListView->setModel(m_music_palyer);
+    m_fileThread->start();
 //连接按钮与播放器的槽函数
     connect(ui->preSong_Btn,&QPushButton::clicked,m_music_palyer,&musicPlayer::preMusic);
     connect(ui->nextSong_Btn,&QPushButton::clicked,m_music_palyer,&musicPlayer::nextMusic);
@@ -24,11 +23,24 @@ MusicPlayerPanel::MusicPlayerPanel(QWidget *parent) :
     connect(ui->volumDown_Btn,&QPushButton::clicked,m_music_palyer,&musicPlayer::VolumDown);
     connect(ui->volumUp_Btn,&QPushButton::clicked,m_music_palyer,&musicPlayer::volumUp);
     connect(ui->musicListView,&QListView::doubleClicked,this,&MusicPlayerPanel::itemDoubleClicked);
+    connect(m_music_palyer,&musicPlayer::playStateChange,ui->playSonn_Btn,&QPushButton::setDefault);
+    this->setWindowFlags(Qt::FramelessWindowHint);      //设置为无边框窗口
+    this->setMinimumSize(45,45);                        //设置最小尺寸
+    ui->verticalSlider->setRange(0,100);
+    connect(ui->verticalSlider,&QSlider::valueChanged,m_music_palyer,&musicPlayer::setVolum);
+    connect(m_music_palyer,&musicPlayer::volumChanged,ui->musicVolumLiEd,&QLineEdit::setText);
+    ui->playSonn_Btn->setDefault(m_music_palyer->getIfPlay());
+
+    //ui->musicListView
+    ui->musicListView->setModel(m_music_palyer);
 }
 
 MusicPlayerPanel::~MusicPlayerPanel()
 {
     delete ui;
+    emit stopThread();
+    m_fileThread->quit();
+    m_fileThread->wait();
     delete m_fileThread;
     delete m_music_palyer;
 }

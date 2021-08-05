@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>320</width>
+    <height>240</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,10 +16,10 @@
   <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>30</x>
      <y>10</y>
-     <width>731</width>
-     <height>361</height>
+     <width>271</width>
+     <height>221</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -39,42 +39,43 @@
      <widget class="Titlebar" name="titlebar" native="true"/>
     </item>
     <item>
-     <spacer name="verticalSpacer">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
+     <widget class="QPushButton" name="weatherRequest_Btn">
+      <property name="minimumSize">
        <size>
-        <width>20</width>
-        <height>40</height>
+        <width>0</width>
+        <height>35</height>
        </size>
       </property>
-     </spacer>
+      <property name="text">
+       <string>查询天气</string>
+      </property>
+     </widget>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <widget class="QPushButton" name="weatherRequest_Btn">
-        <property name="text">
-         <string>查询天气</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="music_Btn">
-        <property name="text">
-         <string>播放音乐</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="control_Btn">
-        <property name="text">
-         <string>设置控制</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
+     <widget class="QPushButton" name="music_Btn">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>35</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>播放音乐</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="control_Btn">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>35</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>设置控制</string>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
@@ -83,7 +84,7 @@
   <customwidget>
    <class>Titlebar</class>
    <extends>QWidget</extends>
-   <header location="global">titlebar.h</header>
+   <header>titlebar.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

@@ -18,6 +18,7 @@ public:
 
 signals:
     void backOff();
+    void stopThread();
 private:
     Ui::MusicPlayerPanel *ui;
     musicPlayer* m_music_palyer;

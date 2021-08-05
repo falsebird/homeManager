@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>39</height>
+    <width>402</width>
+    <height>42</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -33,14 +33,14 @@
     <widget class="QPushButton" name="backBtn">
      <property name="minimumSize">
       <size>
-       <width>24</width>
-       <height>24</height>
+       <width>30</width>
+       <height>30</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
-       <width>24</width>
-       <height>24</height>
+       <width>30</width>
+       <height>30</height>
       </size>
      </property>
      <property name="text">
@@ -97,8 +97,8 @@
      </property>
      <property name="maximumSize">
       <size>
-       <width>24</width>
-       <height>24</height>
+       <width>30</width>
+       <height>30</height>
       </size>
      </property>
      <property name="text">

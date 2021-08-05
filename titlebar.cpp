@@ -7,7 +7,7 @@ Titlebar::Titlebar(QWidget *parent) :
 {
     _ispressed=false;
     ui->setupUi(this);
-    this->setFixedHeight(40);
+    this->setFixedHeight(50);
     connect(ui->clostBtn, SIGNAL(clicked(bool)), qApp, SLOT(quit()));
  // ui->winTitle->setStyleSheet(QString::fromUtf8("font: 20pt \"Arial\";color : #00ffff;"));
 //  ui->winTitle->setStyleSheet(QString::fromUtf8("color : #00ffff;"));
@@ -22,7 +22,7 @@ Titlebar::~Titlebar()
 void Titlebar::setNoVisBack()
 {
     ui->backBtn->setVisible(false);
-    ui->leftSpacer->changeSize(0,0);
+//    ui->leftSpacer->changeSize(0,0);
 }
 
 void Titlebar::setNoClose()

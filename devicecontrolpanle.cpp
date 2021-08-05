@@ -39,10 +39,9 @@ DeviceControlPanle::DeviceControlPanle(QWidget *parent) :
     ui->airCondiSwitchBtn->setDefault(m_airCondiFlag);
     ui->airCondiStateBtn->setDefault(m_airCondiFlag);
 
-//    setLightSwitchBack();
-//    setAirConSwitchBack();
-//    setBedLightSwitchBack();
-//    setSoundSwitchBack();
+    this->setWindowFlags(Qt::FramelessWindowHint);      //设置为无边框窗口
+    this->setMinimumSize(45,45);                        //设置最小尺寸
+
 }
 
 
@@ -119,10 +118,10 @@ void DeviceControlPanle::on_soundSwitchBtn_clicked()
 void DeviceControlPanle::on_airCondiSwitchBtn_clicked()
 {
     if(m_airCondiFlag == 0){
-        ui->outInfoPlaTeEd->appendPlainText(tr("空调关闭"));
+        ui->outInfoPlaTeEd->appendPlainText(tr("空调打开"));
         m_airCondiFlag= 1;
     }else if(m_airCondiFlag ==1){
-        ui->outInfoPlaTeEd->appendPlainText(tr("空调打开"));
+        ui->outInfoPlaTeEd->appendPlainText(tr("空调关闭"));
         m_airCondiFlag= 0;
     }
     ui->airCondiSwitchBtn->setDefault(m_airCondiFlag);

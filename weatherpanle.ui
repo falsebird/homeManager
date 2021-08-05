@@ -23,11 +23,17 @@
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="leftMargin">
+     <number>20</number>
+    </property>
     <property name="topMargin">
-     <number>22</number>
+     <number>20</number>
+    </property>
+    <property name="rightMargin">
+     <number>20</number>
     </property>
     <property name="bottomMargin">
-     <number>22</number>
+     <number>20</number>
     </property>
     <item>
      <widget class="Titlebar" name="titlebar" native="true"/>

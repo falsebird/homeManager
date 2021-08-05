@@ -8,7 +8,8 @@ MyNetwork::MyNetwork(QObject *parent) : QObject(parent)
 MyNetwork::~MyNetwork()
 {
     delete manager;
-    delete reply;
+
+
 }
 
 void MyNetwork::data_utf8_encode(QString &data)

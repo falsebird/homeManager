@@ -11,6 +11,7 @@ DeviceSwitch::DeviceSwitch(QWidget *parent) :
     connect(ui->deviceSwitchBtn,&QPushButton::clicked,this,&DeviceSwitch::deviceSwitch);
     connect(ui->vloumSlider,&QSlider::valueChanged,this,&DeviceSwitch::setVoulum);
     setLayout(ui->horizontalLayout);
+
 //    setFixedSize(200,100);
 }
 

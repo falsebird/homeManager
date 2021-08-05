@@ -13,6 +13,8 @@ WeatherPanle::WeatherPanle(QWidget *parent) :
      net = new MyNetwork(this);
      connect(ui->requestBtn,&QPushButton::clicked,this,&WeatherPanle::search);
      connect(net,&MyNetwork::weathreInfo,this,&WeatherPanle::getWeatherInfo);
+     this->setWindowFlags(Qt::FramelessWindowHint);      //设置为无边框窗口
+     this->setMinimumSize(45,45);                        //设置最小尺寸
 
 }
 
@@ -20,7 +22,10 @@ WeatherPanle::~WeatherPanle()
 {
     delete ui;
     delete net;
-    delete m_currentWeatherInfo;
+    if(m_currentWeatherInfo!=NULL){
+        delete m_currentWeatherInfo;
+    }
+
 }
 
 void WeatherPanle::backoffClicked()

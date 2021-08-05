@@ -11,6 +11,11 @@ LoginDialog::LoginDialog(QWidget *parent) :
     connect(this,&LoginDialog::userLogin,loginControlor,&LoginControlor::loginRequest);
     connect(loginControlor,&LoginControlor::logInScuess,this,&LoginDialog::logInsuccess);
     //setStyle();
+    this->setWindowFlags(Qt::FramelessWindowHint);      //设置为无边框窗口
+    this->setMinimumSize(45,45);                        //设置最小尺寸
+    ui->titlebar->setNoVisBack();
+    ui->titlebar->setTitle("登录");
+
 }
 
 LoginDialog::~LoginDialog()

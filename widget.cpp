@@ -8,9 +8,9 @@ Widget::Widget(QWidget *parent)
     ui->setupUi(this);
     setLoginDialog();
     setMainWindos();
-//    setMusicPanle();
-//    setWeatherPanle();
-//    setDeviceContPanle();
+    setMusicPanle();
+    setWeatherPanle();
+    setDeviceContPanle();
 
 }
 
@@ -33,21 +33,21 @@ void Widget::loadStyleSheet(const QString& sheetName)
 
 void Widget::setMusicPanle()
 {
-    musicPlayerPanel = new MusicPlayerPanel(this);
+    musicPlayerPanel = new MusicPlayerPanel();
     connect(musicPlayerPanel,&MusicPlayerPanel::backOff,this,&Widget::secondPageBackOff);
 //    musicPlayerPanel->hide();
 }
 
 void Widget::setDeviceContPanle()
 {
-    deviceContPanle = new  DeviceControlPanle(this);
+    deviceContPanle = new  DeviceControlPanle();
     connect(deviceContPanle,&DeviceControlPanle::backOff,this,&Widget::secondPageBackOff);
 //    deviceContPanle->hide();
 }
 
 void Widget::setWeatherPanle()
 {
-    weatherPanle = new WeatherPanle(this);
+    weatherPanle = new WeatherPanle();
     connect(weatherPanle,&WeatherPanle::backOff,this,&Widget::secondPageBackOff);
 //    weatherPanle->hide();
 }
@@ -68,7 +68,7 @@ void Widget::setMainWindos()
 
 void Widget::setLoginDialog()
 {
-    loginDialog = new LoginDialog(this);
+    loginDialog = new LoginDialog();
     loginDialog->show();
 }
 
@@ -87,7 +87,7 @@ void Widget::secondPageBackOff()
 void Widget::on_weatherRequest_Btn_clicked()
 {
 //    this->close();
-    setWeatherPanle();
+//    setWeatherPanle();
 //    this->hide();
     weatherPanle->show();
     this->hide();
@@ -96,7 +96,7 @@ void Widget::on_weatherRequest_Btn_clicked()
 void Widget::on_music_Btn_clicked()
 {
 //    this->close();
-    setMusicPanle();
+//    setMusicPanle();
 //    this->hide();
     musicPlayerPanel->show();
     this->hide();
@@ -105,7 +105,7 @@ void Widget::on_music_Btn_clicked()
 void Widget::on_control_Btn_clicked()
 {
 //    this->close();
-    setDeviceContPanle();
+//    setDeviceContPanle();
 
     deviceContPanle->show();
     this->hide();

@@ -23,6 +23,12 @@
     </rect>
    </property>
    <layout class="QVBoxLayout" name="mainVerLay">
+    <property name="leftMargin">
+     <number>20</number>
+    </property>
+    <property name="rightMargin">
+     <number>20</number>
+    </property>
     <property name="bottomMargin">
      <number>20</number>
     </property>

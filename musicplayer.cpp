@@ -6,11 +6,18 @@ musicPlayer::musicPlayer(QObject *parent) : QAbstractListModel(parent)
     m_current_volum = 20;
     m_music_player = new QMediaPlayer(this);
     m_play_flag = false;
+    num = 0;
+    emit volumChanged(QString::number( m_current_volum));
 }
 
 musicPlayer::~musicPlayer()
 {
     delete m_music_player;
+}
+
+bool musicPlayer::getIfPlay() const
+{
+    return m_play_flag;
 }
 
 QVariant musicPlayer::data(const QModelIndex &index, int role) const
@@ -32,7 +39,8 @@ QVariant musicPlayer::data(const QModelIndex &index, int role) const
 
 int musicPlayer::rowCount(const QModelIndex &parent) const
 {
-    return _fileList->size();
+    return num;
+
 }
 
 int musicPlayer::columnCount(const QModelIndex &parent) const
@@ -48,7 +56,9 @@ QHash<int, QByteArray> musicPlayer::roleNames() const
 void musicPlayer::getFileInfoList(QFileInfoList * fileList)
 {
     emit beginResetModel();
+    qDebug()<<"get file list music player"<<endl;
     _fileList = fileList;
+    num = _fileList->size();
     emit endResetModel();
 }
 
@@ -63,6 +73,7 @@ void musicPlayer::playMusic(int row)
         m_music_player->setVolume(40); // 0~100
         m_music_player->play();
         m_play_flag = true;
+        emit playStateChange(m_play_flag);
         qDebug()<<" puse music"<<endl;
     }
 
@@ -102,16 +113,26 @@ void musicPlayer::_puseMusic()
     qDebug()<<" puse music"<<endl;
     m_music_player->pause();
     m_play_flag = false;
+    emit playStateChange(m_play_flag);
 }
 
 void musicPlayer::volumUp()
 {
     m_current_volum +=1;
     m_music_player->setVolume(m_current_volum);
+    emit volumChanged(QString::number( m_current_volum));
 }
 
 void musicPlayer::VolumDown()
 {
     m_current_volum -=1;
     m_music_player->setVolume(m_current_volum);
+    emit volumChanged(QString::number( m_current_volum));
+}
+
+void musicPlayer::setVolum(int v)
+{
+    m_current_volum = v;
+    m_music_player->setVolume(m_current_volum);
+    emit volumChanged(QString::number( m_current_volum));
 }

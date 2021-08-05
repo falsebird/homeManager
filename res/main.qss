@@ -1,13 +1,22 @@
 
 
 
-Titlebar{
+Titlebar#titlebar{
     color:#212121;
     font: 28pt "黑体";
     background:#0288D1;
 }
 Widget{
      background:#B3E5FC;
+}
+QWidget#DeviceControlPanle{
+    background:#B3E5FC;
+}
+QWidget#WeatherPanle{
+background:#B3E5FC;
+}
+QWidget#MusicPlayerPanel{
+background:#B3E5FC;
 }
 QDialog{
     background:#B3E5FC;
@@ -131,36 +140,77 @@ QPushButton#tempDownBtn{
 }
 QPushButton#clearOutInfoBtn{
     border-image:url(:/res/imgs/btn_noAct.png);
-
+    font: 12pt "黑体";
     color:#FFFFFF;
 }
 QPushButton#clearOutInfoBtn:open{
     border-image:url(:/res/imgs/btn_Acti.png);
     color:#212121;
+    font: 12pt "黑体";
 }
 
 QPushButton#logInBtn{
     border-image:url(:/res/imgs/btn_noAct.png);
     color:#FFFFFF;
+    font: 12pt "黑体";
 }
 QPushButton#logInBtn:open{
     border-image:url(:/res/imgs/btn_Acti.png);
     color:#212121;
+    font: 12pt "黑体";
+}
+QPushButton#weatherRequest_Btn{
+    border-image:url(:/res/imgs/btn_noAct.png);
+    color:#FFFFFF;
+    font: 12pt "黑体";
+}
+QPushButton#weatherRequest_Btn:open{
+    border-image:url(:/res/imgs/btn_Acti.png);
+    color:#212121;
+    font: 12pt "黑体";
+}
+QPushButton#music_Btn{
+    border-image:url(:/res/imgs/btn_noAct.png);
+    color:#FFFFFF;
+    font: 12pt "黑体";
+}
+QPushButton#music_Btn:open{
+    border-image:url(:/res/imgs/btn_Acti.png);
+    color:#212121;
+    font: 12pt "黑体";
+}
+QPushButton#control_Btn{
+    border-image:url(:/res/imgs/btn_noAct.png);
+    color:#FFFFFF;
+    font: 12pt "黑体";
+}
+QPushButton#control_Btn:open{
+    border-image:url(:/res/imgs/btn_Acti.png);
+    color:#212121;
+    font: 12pt "黑体";
 }
 QPushButton#requestBtn{
 border-image:url(:/res/imgs/btn_noAct.png);
 color:#FFFFFF;
+font: 12pt "黑体";
 }
 QPushButton#requestBtn:open{
 border-image:url(:/res/imgs/btn_Acti.png);
 color:#212121;
+font: 12pt "黑体";
 }
 
 QPushButton#playSonn_Btn{
     border-image:url(:/res/imgs/play_noAct.png);
 }
-QPushButton#playSonn_Btn:default{
+QPushButton#playSonn_Btn:open{
     border-image:url(:/res/imgs/play_acti.png);
+}
+QPushButton#playSonn_Btn:default{
+    border-image:url(:/res/imgs/pulse_noAct.png);
+}
+QPushButton#playSonn_Btn:default:open{
+    border-image:url(:/res/imgs/pulse_acti.png);
 }
 QPushButton#nextSong_Btn{
 border-image:url(:/res/imgs/next_noAct.png);

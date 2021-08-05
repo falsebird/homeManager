@@ -12,6 +12,7 @@ class musicPlayer : public QAbstractListModel
 public:
     explicit musicPlayer(QObject *parent = nullptr);
     ~musicPlayer();
+    bool getIfPlay() const ;
 protected:
     QVariant data(const QModelIndex &index, int role) const;
     int rowCount(const QModelIndex &parent) const;
@@ -19,7 +20,8 @@ protected:
     virtual QHash<int, QByteArray> roleNames() const;
 
 signals:
-
+    void playStateChange(const bool&);
+    void volumChanged(const QString&);
 public slots:
     void getFileInfoList(QFileInfoList *);
     void playMusic(int row);
@@ -29,6 +31,7 @@ public slots:
     void _puseMusic();
     void volumUp();
     void VolumDown();
+    void setVolum(int v);
 private:
     QFileInfoList *_fileList;//存储文件信息的指针
     int m_current_paly_row;
@@ -36,6 +39,7 @@ private:
     int m_current_volum;
     bool m_play_flag;
     int play_state;
+    int num ;
 };
 
 #endif // MUSICPLAYER_H
